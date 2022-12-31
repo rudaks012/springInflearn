@@ -6,6 +6,16 @@ public class Member {
     private String name;
     private Grade grade;
 
+    private int money;
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
     public Member(Long id, String name, Grade grade) {
         this.id = id;
         this.name = name;
