@@ -49,6 +49,8 @@ public class Order {
         this.discountPrice = discountPrice;
     }
 
+    //toString 을하면 자동으로 출력됨
+
     @Override
     public String toString() {
         return "Order{" +
