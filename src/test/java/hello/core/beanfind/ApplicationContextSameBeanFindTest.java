@@ -1,14 +1,11 @@
 package hello.core.beanfind;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
-import java.security.Key;
 import java.util.Map;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
@@ -32,7 +29,7 @@ public class ApplicationContextSameBeanFindTest {
     @Test
     @DisplayName("타입으로 조회 시 같은 타입이 둘 이상 있으면, 빈 이름을 지정하면 된다/")
     void ApplicationContextSameBeanFindTest() {
-        MemberRepository memberRepository = ac.getBean("memberRepository",MemberRepository.class);
+        MemberRepository memberRepository = ac.getBean("memberRepository", MemberRepository.class);
         assertThat(memberRepository).isInstanceOf(MemberRepository.class);
     }
 
